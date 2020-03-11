@@ -53,19 +53,5 @@ public final class StringDuplicateDeleter extends DuplicateDeleter<String> {
     }
 
     private int[] occurrenceArray() {
-        int[] occurrences = new int[array.length];
-        int index = 0;
-        for (String str : this.array) {
-            occurrences[index] = numberOfOccurrences(str);
-            index++;
-        }
-        return occurrences;
-    }
 
-    private int numberOfOccurrences(String string) {
-        int count = 0;
-        for (String str : this.array) if (str.equals(string)) count++;
-        return count;
-    }
-}
 
